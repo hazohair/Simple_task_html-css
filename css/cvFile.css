@@ -113,8 +113,15 @@ body::-webkit-scrollbar {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 23px 14px 0 rgb(0 0 0 / 50%), 0 20px 40px 0 rgb(0 0 0 / 50%);
   animation: example1 .5s linear;
+  transition: .5s ;
+  transform: scale(.9,.9);
+}
+
+#left_photos:hover,
+#right_photos:hover {
+  transform: scale(1, 1);
 }
 
 #left_photos img,
@@ -192,7 +199,7 @@ body::-webkit-scrollbar {
   margin-bottom: 1.5rem;
 }
 
-#info button {
+#info a {
   background-color: rgb(55, 53, 58);
   border: 1px solid;
   color: #ddd;
@@ -201,7 +208,7 @@ body::-webkit-scrollbar {
   font-size: 20px;
 }
 
-#info button:hover {
+#info a:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   font-size: 21px;
   color: #ddd;
@@ -312,7 +319,7 @@ p[role="progressbar"]::before {
   margin: 30px 0;
   font-weight: bold;
   font-size: 26px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 23px 14px 0 rgba(0, 0, 0, 0.5), 0 20px 40px 0 rgb(0 0 0 / 50%);
   animation: hob 1.5s linear;
 }
 
@@ -365,17 +372,19 @@ p[role="progressbar"]::before {
   color: #9a9a9a;
   border: 1px solid rgb(159, 158, 158);
   border-radius: 8px;
+  box-shadow: 0 5px 10px 0 rgb(0 0 0 / 50%), 0 5px 10px 0 rgb(0 0 0 / 50%);
   transition: all .5s cubic-bezier(.77, 0, .175, 1);
 }
 
-.div_contact:hover,
-a:hover {
-
+.div_contact:hover a
+ {
   color: rgb(55, 53, 58);
+}
+.div_contact:hover 
+ {
   transform: scale(1.1, 1.1);
 
 }
-
 a {
   text-decoration: none;
   color: #9a9a9a;
